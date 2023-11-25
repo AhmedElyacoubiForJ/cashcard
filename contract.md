@@ -1,3 +1,4 @@
+#### Module 1 Creating RESTful Endpoints
 ### API Contracts & JSON
 * API contracts are a popular means for API providers and consumers 
 * to agree upon how an API will behave.
@@ -49,3 +50,10 @@ Example Response Body:
 * Create a REST Controller
 * Add the GET endpoint to the Controller
 * Learn about and use the @PathVariable annotation
+
+### Repositories & Spring Data
+* Add Spring Data to our application
+* Create the CashCardRepository
+* Use Dependency Injection to make our CashCardRepository available for use
+* Configure an in-memory Database
+* Use the CashCardRepository for data management
