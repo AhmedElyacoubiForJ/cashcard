@@ -13,6 +13,7 @@ import java.io.IOException;
 // Use TDD to test JSON deserialization
 
 // Testing the Data Contract
+// Serialization / Deserialization
 @JsonTest
 public class CashCardJsonTest {
 
