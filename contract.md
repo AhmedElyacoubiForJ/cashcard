@@ -1,4 +1,4 @@
-#### Module 1 Creating RESTful Endpoints
+#### Module 1 Creating RESTful Endpoints, Start
 ### API Contracts & JSON
 * API contracts are a popular means for API providers and consumers 
 * to agree upon how an API will behave.
@@ -57,3 +57,17 @@ Example Response Body:
 * Use Dependency Injection to make our CashCardRepository available for use
 * Configure an in-memory Database
 * Use the CashCardRepository for data management
+
+#### Module 1 Creating RESTful Endpoints. End
+
+#### Module 2 Developing a Secure App, Start
+### Implementing POST
+* [**Implementing POST**] ([https://spring.academy/courses/building-a-rest-api-with-spring-boot/lessons/implementing-post]
+## objectives
+* Start with a failing test for the desired HTTP POST endpoint
+* Add and implement the POST endpoint
+* Learn about semantic correctness
+* Understand and use CrudRepository.save
+
+## HTTP Semantics and Content (RFC 7231)
+* If one or more resources has been created on the origin server as a result of successfully processing a POST request, the origin server SHOULD send a 201 (Created) response containing a Location header field that provides an identifier for the primary resource created .

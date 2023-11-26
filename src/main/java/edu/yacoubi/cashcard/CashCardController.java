@@ -1,11 +1,10 @@
 package edu.yacoubi.cashcard;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
+import org.springframework.web.util.UriComponentsBuilder;
 import java.util.Optional;
 
 @RestController
@@ -28,5 +27,19 @@ class CashCardController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+
+    @PostMapping
+    private ResponseEntity<Void> createCashCard(@RequestBody CashCard newCashCardRequest, UriComponentsBuilder ucb) {
+        CashCard savedCashCard = cashCardRepository.save(newCashCardRequest);
+        // This is constructing a URI to the newly created CashCard.
+        // This is the URI that the caller can then use
+        // to GET the newly-created CashCard.
+        URI locationOfNewCashCard = ucb
+                .path("cashcards/{id}")
+                .buildAndExpand(savedCashCard.id())
+                .toUri();
+        return ResponseEntity.created(locationOfNewCashCard).build();
     }
 }
