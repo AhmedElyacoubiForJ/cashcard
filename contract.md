@@ -62,7 +62,7 @@ Example Response Body:
 
 #### Module 2 Developing a Secure App, Start
 ### Implementing POST
-* [**Implementing POST**] ([https://spring.academy/courses/building-a-rest-api-with-spring-boot/lessons/implementing-post]
+* [**Implementing POST**] ([https://spring.academy/courses/building-a-rest-api-with-spring-boot/lessons/implementing-post])
 ## objectives
 * Start with a failing test for the desired HTTP POST endpoint
 * Add and implement the POST endpoint
@@ -70,4 +70,25 @@ Example Response Body:
 * Understand and use CrudRepository.save
 
 ## HTTP Semantics and Content (RFC 7231)
-* If one or more resources has been created on the origin server as a result of successfully processing a POST request, the origin server SHOULD send a 201 (Created) response containing a Location header field that provides an identifier for the primary resource created .
+* If one or more resources has been created on the origin server as a result of successfully processing a POST request,
+* the origin server SHOULD send a 201 (Created) response containing a Location header field that provides an identifier
+* for the primary resource created.
+
+### Returning a list with GET
+* [**Implementing POST**] (https://spring.academy/courses/building-a-rest-api-with-spring-boot/lessons/get-list)
+* Let's go implement lists, paging, and sorting in our own Family Cash Card API
+* We've made the following changes from the previous lab.
+* Added a couple more Cash Card data fixtures to data.sql
+* Refactored CashCardJsonTest.java to incorporate the new data fixtures.
+* Renamed expected.json to single.json, and added another data contract JSON file: list.json.
+* Added some imports to the Test classes, so you don't have to!
+* Added the @DirtiesContext annotation to the CashCardApplicationTests class.
+
+### objectives
+* Test the new Cash Card "list" JSON data contract
+* Start with a failing test for a List endpoint
+* Implement a GET endpoint for a list
+* Implement pagination
+* Implement sorting
+* Combine paging and sorting and add default behavior
+* Learn about test interaction and the @DirtiesContext annotation
