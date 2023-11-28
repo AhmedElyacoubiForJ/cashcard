@@ -1,5 +1,6 @@
 package edu.yacoubi.cashcard;
 
+import edu.yacoubi.cashcard.model.CashCard;
 import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
