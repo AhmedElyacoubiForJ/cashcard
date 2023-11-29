@@ -102,3 +102,17 @@ Example Response Body:
 * Utilize our Repository updates in our Controller to enhance security
 * Ensure only the correct Cash Card owner can create and own new Cash Cards
 * Learn how we deal with Cross-Site Request Forgery (CSRF)
+#### Module 2 Developing a Secure App, End
+
+#### Module 3 Rounding Out CRUD, Start
+## Implementing PUT
+* 
+## Lab: implementing PUT
+*
+
+## Implementing DELETE
+*
+
+## Lab: implementing DELETE
+*
+#### Module 3 Rounding Out CRUD, End
