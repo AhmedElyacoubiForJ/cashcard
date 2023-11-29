@@ -64,7 +64,7 @@ class CashCardApplicationTests {
 	@Test
 	@DirtiesContext
 	void shouldCreateANewCashCard() {
-
+		// CashCard newCashCard = new CashCard(null, 250.00, null);
 		CashCard newCashCard = new CashCard(
 				null,
 				250.00,
