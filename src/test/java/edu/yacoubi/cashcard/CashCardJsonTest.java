@@ -43,14 +43,19 @@ public class CashCardJsonTest {
     void cashCardSerializationTest() throws IOException {
         CashCard cashCard = cashCards[0];
 
-        assertThat(json.write(cashCard)).isStrictlyEqualToJson("single.json");
+        assertThat(json.write(cashCard))
+                .isStrictlyEqualToJson("single.json");
 
-        assertThat(json.write(cashCard)).hasJsonPathNumberValue("@.id");
-        assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.id")
+        assertThat(json.write(cashCard))
+                .hasJsonPathNumberValue("@.id");
+        assertThat(json.write(cashCard))
+                .extractingJsonPathNumberValue("@.id")
                 .isEqualTo(99);
 
-        assertThat(json.write(cashCard)).hasJsonPathNumberValue("@.amount");
-        assertThat(json.write(cashCard)).extractingJsonPathNumberValue("@.amount")
+        assertThat(json.write(cashCard))
+                .hasJsonPathNumberValue("@.amount");
+        assertThat(json.write(cashCard))
+                .extractingJsonPathNumberValue("@.amount")
                 .isEqualTo(123.45);
     }
 
@@ -65,11 +70,18 @@ public class CashCardJsonTest {
                 }
                 """;
 
-        assertThat(json.parse(expected))
-                .isEqualTo(new CashCard(99L, 123.45, "sarah1"));
+        CashCard cashCard = new CashCard(
+                99L,
+                123.45,
+                "sarah1"
+        );
 
-        assertThat(json.parseObject(expected).id()).isEqualTo(99L);
-        assertThat(json.parseObject(expected).amount()).isEqualTo(123.45);
+        assertThat(json.parse(expected)).isEqualTo(cashCard);
+
+        assertThat(json.parseObject(expected).id())
+                .isEqualTo(99L);
+        assertThat(json.parseObject(expected).amount())
+                .isEqualTo(123.45);
     }
 
     @Test
